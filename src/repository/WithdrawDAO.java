@@ -15,11 +15,12 @@ public class WithdrawDAO {
 		/// connection Back API
 
 		// temp Code;
+		LocalDateTime time = LocalDateTime.now();
 
-		Withdraw withdraw1 = new Withdraw(LocalDateTime.now(), "place1", -1000);
-		Withdraw withdraw2 = new Withdraw(LocalDateTime.now(), "place2", -2000);
-		Withdraw withdraw3 = new Withdraw(LocalDateTime.now(), "place3", -3000);
-		Withdraw withdraw4 = new Withdraw(LocalDateTime.now(), "place4", -4000);
+		Withdraw withdraw1 = new Withdraw(time.minusDays(60), "place1", -1000);
+		Withdraw withdraw2 = new Withdraw(time.minusDays(40), "place2", -2000);
+		Withdraw withdraw3 = new Withdraw(time.minusDays(30), "place3", -3000);
+		Withdraw withdraw4 = new Withdraw(time.minusDays(10), "place4", -4000);
 		list.add(withdraw1);
 		list.add(withdraw2);
 		list.add(withdraw3);

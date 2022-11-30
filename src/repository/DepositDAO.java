@@ -14,11 +14,11 @@ public class DepositDAO {
 
 		/// connect Bank API
 		// temp Code
-
-		Deposit deposit1 = new Deposit(LocalDateTime.now(), "place1", 1000);
-		Deposit deposit2 = new Deposit(LocalDateTime.now(), "place2", 2000);
-		Deposit deposit3 = new Deposit(LocalDateTime.now(), "place3", 3000);
-		Deposit deposit4 = new Deposit(LocalDateTime.now(), "place4", 4000);
+		LocalDateTime time = LocalDateTime.now();
+		Deposit deposit1 = new Deposit(time.minusDays(60), "place1", 1000);
+		Deposit deposit2 = new Deposit(time.minusDays(50), "place2", 2000);
+		Deposit deposit3 = new Deposit(time.minusDays(40), "place3", 3000);
+		Deposit deposit4 = new Deposit(time.minusDays(30), "place4", 4000);
 		list.add(deposit1);
 		list.add(deposit2);
 		list.add(deposit3);

@@ -1,5 +1,6 @@
 package controller;
 
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -56,7 +57,7 @@ public class ATMController {
 					case 2:
 						List<Deposit> depositList = DepositService.getDepositList(cardInfo, accountNo);
 						for (int i = 0; i < depositList.size(); i++) {
-							System.out.print(depositList.get(i).getInputDate() + " ");
+							System.out.print(depositList.get(i).getInputDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + " ");
 							System.out.print(depositList.get(i).getInputLocation() + "  ");
 							System.out.println(depositList.get(i).getMoney());
 						}
@@ -65,7 +66,7 @@ public class ATMController {
 					case 3:
 						List<Withdraw> withdrawList = WithdrawService.getWithdrawList(cardInfo, accountNo);
 						for (int i = 0; i < withdrawList.size(); i++) {
-							System.out.print(withdrawList.get(i).getOutputDate() + " ");
+							System.out.print(withdrawList.get(i).getOutputDate().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")) + " ");
 							System.out.print(withdrawList.get(i).getOutputLocation() + "  ");
 							System.out.println(withdrawList.get(i).getMoney());
 						}
