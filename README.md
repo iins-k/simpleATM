@@ -20,3 +20,7 @@
 > ### 2. only show test dummy data
 >
 > ### 3. very Simple Code
+>
+> ### 4. input cardNumber, password are string Type, another inputs only digit Type
+>
+> ### 5. this project do not have exception handling
